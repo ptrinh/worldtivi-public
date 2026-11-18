@@ -12,12 +12,15 @@ Get the files from the [latest release](https://github.com/ptrinh/worldtivi-publ
 | Platform | File |
 |---|---|
 | macOS 11+ (Apple silicon and Intel, one app) | `WorldTivi-<version>-mac-universal.dmg` |
-| Windows 10/11 (x64; runs on Windows on Arm too) | `WorldTivi-<version>-windows-setup.exe` |
+| Windows 10/11 x64 | `WorldTivi-<version>-windows-setup.exe` |
+| Windows on Arm (Arm64) | `WorldTivi-<version>-windows-arm64-setup.exe` |
 | Linux x64: Debian, Ubuntu and derivatives | `worldtivi_<version>_amd64.deb` |
 | Linux x64: any distribution | `WorldTivi-<version>-linux-x86_64.AppImage` |
+| Linux Arm64: Debian, Ubuntu and derivatives | `worldtivi_<version>_arm64.deb` |
+| Linux Arm64: any distribution | `WorldTivi-<version>-linux-aarch64.AppImage` |
 
 - The macOS app is signed with Developer ID (SENPRINTS LLC) and notarized by Apple.
-- The Windows installer is signed by SENPRINTS LLC.
+- The Windows installers are signed by SENPRINTS LLC.
 - `SHA256SUMS` in each release lists the checksums of its files.
 
 ## Install with a package manager
@@ -40,7 +43,7 @@ winget install SENPRINTS.WorldTivi
 choco install worldtivi
 ```
 
-**Debian, Ubuntu and derivatives (apt)**: add the World Tivi repository once, then updates come with `apt upgrade`.
+**Debian, Ubuntu and derivatives (apt)**: add the World Tivi repository once, then updates come with `apt upgrade` (amd64 and arm64).
 
 ```sh
 curl -fsSL https://dl.trinh.uk/apt/worldtivi.gpg | sudo tee /usr/share/keyrings/worldtivi.gpg >/dev/null
