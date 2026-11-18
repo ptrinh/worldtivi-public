@@ -20,6 +20,37 @@ Get the files from the [latest release](https://github.com/ptrinh/worldtivi-publ
 - The Windows installer is signed by SENPRINTS LLC.
 - `SHA256SUMS` in each release lists the checksums of its files.
 
+## Install with a package manager
+
+**macOS (Homebrew)**
+
+```sh
+brew install --cask ptrinh/tap/worldtivi
+```
+
+**Windows (winget)**, once the package is accepted into the winget repository:
+
+```powershell
+winget install SENPRINTS.WorldTivi
+```
+
+**Windows (Chocolatey)**, once the package is approved on chocolatey.org:
+
+```powershell
+choco install worldtivi
+```
+
+**Debian, Ubuntu and derivatives (apt)**: add the World Tivi repository once, then updates come with `apt upgrade`.
+
+```sh
+curl -fsSL https://dl.trinh.uk/apt/worldtivi.gpg | sudo tee /usr/share/keyrings/worldtivi.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/worldtivi.gpg] https://dl.trinh.uk/apt stable main" | sudo tee /etc/apt/sources.list.d/worldtivi.list
+sudo apt update && sudo apt install world-tivi
+```
+
+The repository's signing key: `World Tivi apt repository <worldtivi@trinh.uk>`, fingerprint
+`2465 50D3 DF82 5561 50CF  F86F 3111 2CAD 1026 E03D`.
+
 ## Other platforms
 
 Android TV / Google TV, LG webOS, Samsung Tizen and Apple TV versions are listed on the website.
